@@ -1,0 +1,20 @@
+---
+// Js codes
+import BaseHead from "../components/BaseHead.astro";
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} />
+  </head>
+  <body class="bg-zinc-900 h-screen font-serif container">
+    
+    <slot />
+    <div class="h-20 bg-red-500 w-screen">
+    This is from BaseLayout
+    </div> 
+    <!-- change the above div's bg to some uncommon colors  like bg-red-200 or bg-blue-200 -->
+  </body>
+</html>
